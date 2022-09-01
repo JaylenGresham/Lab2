@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.Http.Headers;
+using ConsoleTables;
 
 Console.WriteLine("Hello, World!");
 
@@ -26,4 +27,18 @@ for (int i = 1; i <= num4; i++)
     Console.WriteLine("{0} x {1} = {2}", num3, i, product);
 }
 
+//3. Output the number of bytes in memory that each of the following number types uses and the minimum and maximum values they can have.
+ConsoleTable table = new ConsoleTable("Type", "Minumum", "Maximum");
+table.AddRow("sbyte", "-128", "127");
+table.AddRow("byte", "0", "255");
+table.AddRow("short", "-32768", "32767");
+table.AddRow("ushort", "0", "65532");
+table.AddRow("int", "-2147483648", "2147483647");
+table.AddRow("uint", "0", "4294967295");
+table.AddRow("long", "-9223372036854775", "9223372036854775807");
+table.AddRow("ulong", "0", "18446744073709551615");
+table.AddRow("float", "-3.4028235E+38", "3.4028235E+38");
+table.AddRow("double", "-1.7976931348623157E+308", "1.7976931348623157E+308");
+table.AddRow("decimal", "-79228162514264337593543950335", "79228162514264337593543950335");
+Console.WriteLine(table);
             
