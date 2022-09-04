@@ -112,3 +112,4 @@ while (function != 6)
             break;
     }
 }
+Console.WriteLine("Thank you for using this program");
